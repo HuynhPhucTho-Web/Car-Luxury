@@ -1,0 +1,131 @@
+/* Vùng chính */
+.car-list-container {
+  padding: 2rem;
+  background-color: #f2f4f8;
+  min-height: 100vh;
+}
+
+/* Tiêu đề trang */
+.car-list-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Thanh lọc theo loại (category) */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Chip lọc theo loại */
+.filter-chip {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  width: 100px;
+}
+
+.filter-chip:hover {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+}
+
+.filter-chip.active {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+  font-weight: 500;
+}
+
+.filter-chip img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+/* Bộ lọc nâng cao (search, price, sort) */
+.advanced-filters .form-control,
+.advanced-filters .form-select {
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.advanced-filters .form-control:focus,
+.advanced-filters .form-select:focus {
+  border-color: #0d6efd;
+}
+
+/* Khu vực phân trang */
+.pagination-area {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive cho chip */
+@media (max-width: 768px) {
+  .filter-chip {
+    width: 80px;
+    padding: 6px;
+  }
+
+  .filter-chip img {
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
+
+
+/* Card */
+.car-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.car-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.car-card-body h5 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.btn-gold {
+  background-color: #b89f68;
+  color: white;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #a6884e;
+  color: white;
+}
+
+.new-badge {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: #fdd835;
+  padding: 2px 8px;
+}

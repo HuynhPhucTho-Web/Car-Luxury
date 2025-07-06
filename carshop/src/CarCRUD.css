@@ -1,0 +1,39 @@
+.crud-container {
+  margin-top: 40px;
+}
+
+.crud-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.crud-header {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.crud-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.alert-warning strong {
+  color: #dc3545;
+}
+
+.delete-summary img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.delete-summary p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.delete-summary h5 {
+  font-weight: bold;
+}

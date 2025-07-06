@@ -1,0 +1,63 @@
+/* MacBook Detail Styles */
+.product-detail {
+  padding: 1rem 0;
+}
+
+.benefits-list {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}
+
+.action-buttons .btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.spec-section {
+  margin-top: 2rem;
+}
+
+.spec-item {
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.spec-grid {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive improvements for MacBook Detail */
+@media (max-width: 768px) {
+  .action-buttons .btn {
+    padding: 1rem !important;
+    font-size: 0.9rem;
+  }
+
+  .benefits-list,
+  .additional-info {
+    padding: 1rem;
+  }
+
+  .spec-grid {
+    padding: 1rem !important;
+  }
+}

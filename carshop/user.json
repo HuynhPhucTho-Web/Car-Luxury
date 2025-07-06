@@ -1,0 +1,42 @@
+{
+    "admin": [
+        {
+            "adminID": 1,
+            "username": "admin",
+            "fullName": "Admin User",
+            "password": "1234",
+            "role": "admin"
+        }
+    ],
+    "staff": [
+        {
+            "staffID": 1,
+            "username": "staff01",
+            "fullName": "Staff Member",
+            "password": "staffpass",
+            "role": "staff"
+        }
+    ],
+    "customers": [
+        {
+            "customerID": 1,
+            "username": "customer01",
+            "fullName": "Nguyen Van A",
+            "email": "customer01@example.com",
+            "phone": "0909123456",
+            "password": "custpass",
+            "address": "123 Le Loi, District 1, HCMC",
+            "role": "customer"
+        },
+        {
+            "customerID": 2,
+            "username": "customer02",
+            "fullName": "Tran Thi B",
+            "email": "customer02@example.com",
+            "phone": "0911222333",
+            "password": "abc123",
+            "address": "456 Tran Hung Dao, District 5, HCMC",
+            "role": "customer"
+        }
+    ]
+}

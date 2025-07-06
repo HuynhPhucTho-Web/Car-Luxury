@@ -1,0 +1,196 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.macone-navbar {
+  background-color: #000;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* MacBook Detail Styles */
+.product-detail {
+  padding: 1rem 0;
+}
+
+.benefits-list {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}
+
+.action-buttons .btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.spec-section {
+  margin-top: 2rem;
+}
+
+.spec-item {
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.spec-grid {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .action-buttons .btn {
+    padding: 1rem !important;
+    font-size: 0.9rem;
+  }
+
+  .benefits-list,
+  .additional-info {
+    padding: 1rem;
+  }
+
+  .spec-grid {
+    padding: 1rem !important;
+  }
+
+  
+  
+
+}
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-img-top {
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.btn-outline-primary,
+.btn-primary {
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.price-filter .btn {
+  min-width: 130px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 6px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body h6 {
+  font-size: 1rem;
+  min-height: 42px;
+}
+
+.card-body small {
+  font-size: 0.85rem;
+}
+
+.pagination-area button {
+  border-radius: 10px;
+  padding: 6px 14px;
+}
+
+.no-result {
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto !important;
+  }
+}

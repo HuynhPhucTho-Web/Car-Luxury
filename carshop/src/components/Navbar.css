@@ -1,0 +1,42 @@
+.car-navbar {
+  background-color: #000; /* nền đen */
+  font-weight: 500;
+}
+
+.car-navbar .nav-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+.car-navbar .nav-link:hover {
+  color: #087700;
+}
+
+.car-navbar .dropdown-toggle {
+  color: white;
+  border-color: white;
+}
+
+.car-navbar .dropdown-menu {
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.car-navbar .dropdown-item {
+  color: white;
+}
+
+.car-navbar .dropdown-item:hover {
+  background-color: #333;
+}
+
+.logo{
+  width: 150px; /* Kích thước logo */
+  height: 50px; /* Tự động điều chỉnh chiều cao */
+  margin-right: 10px; /* Khoảng cách giữa logo và tên */
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}

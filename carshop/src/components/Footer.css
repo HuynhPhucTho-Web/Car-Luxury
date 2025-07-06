@@ -1,0 +1,158 @@
+.footer {
+  background: #000000;
+  color: #fff;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.footer-top {
+  background: #000000;
+  padding: 24px 0;
+  border-bottom: 1px solid #444;
+}
+
+.footer-top-row {
+  font-weight: 600;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-icon {
+  color: #8fff4f;
+  font-size: 36px;
+}
+
+.footer-sub {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer-main {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.footer-logo img {
+  width: 150px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.footer-info {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-bold {
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-link {
+  color: #0ea5e9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-email {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-social-title {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.footer-social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-social-icon.facebook {
+  background: #4267b2;
+}
+
+.footer-social-icon.youtube {
+  background: #ff0000;
+}
+
+.footer-social-icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-cert img {
+  margin-top: 16px;
+}
+
+.footer-address {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.footer-phone {
+  color: #0ea5e9;
+  margin-bottom: 12px;
+}
+
+.footer-phone a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.footer-note {
+  color: #bbb;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.footer-bottom {
+  color: #bbb;
+  font-size: 15px;
+  border-top: 1px solid #222;
+  padding-top: 16px;
+  text-align: center;
+  margin-top: 32px;
+}
