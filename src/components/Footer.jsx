@@ -13,9 +13,9 @@ export default function FooterCPN() {
               <div className="footer-item">
                 <i className="bi bi-truck footer-icon"></i>
                 <span>
-                  GIAO HÀNG TẬN NƠI
+                  GIAO XE TẬN NƠI
                   <br />
-                  <span className="footer-sub">Miễn phí giao hàng nội thành</span>
+                  <span className="footer-sub">Miễn phí giao xe toàn quốc</span>
                 </span>
               </div>
             </Col>
@@ -23,31 +23,29 @@ export default function FooterCPN() {
               <div className="footer-item">
                 <i className="bi bi-arrow-repeat footer-icon"></i>
                 <span>
-                  ĐỔI TRẢ DỄ DÀNG
+                  ĐỔI TRẢ LINH HOẠT
                   <br />
-                  <span className="footer-sub">Miễn phí đổi trong 10 ngày</span>
+                  <span className="footer-sub">Hỗ trợ đổi trong 7 ngày</span>
                 </span>
               </div>
             </Col>
             <Col md>
               <div className="footer-item">
-                <i className="bi bi-hand-thumbs-up footer-icon"></i>
+                <i className="bi bi-shield-check footer-icon"></i>
                 <span>
-                  HÀNG CHÍNH HÃNG
+                  XE CHÍNH HÃNG
                   <br />
-                  <span className="footer-sub">Cam kết hàng chính hãng 100%</span>
+                  <span className="footer-sub">Bảo hành toàn quốc</span>
                 </span>
               </div>
             </Col>
             <Col md>
               <div className="footer-item">
-                <i className="bi bi-currency-dollar footer-icon"></i>
+                <i className="bi bi-cash-coin footer-icon"></i>
                 <span>
-                  NHẬN HÀNG TRẢ TIỀN
+                  THANH TOÁN LINH HOẠT
                   <br />
-                  <span className="footer-sub">
-                    Tiền mặt, quẹt thẻ, chuyển khoản
-                  </span>
+                  <span className="footer-sub">Chuyển khoản, trả góp, thẻ</span>
                 </span>
               </div>
             </Col>
@@ -60,39 +58,24 @@ export default function FooterCPN() {
         <Row className="gy-4">
           <Col md={4}>
             <div className="footer-logo">
-              <img src="/images/logov4.png" alt="MACONE Logo" />
+              <img src="/images/logov4.png" alt="CarLuxury Logo" />
             </div>
             <div className="footer-info">
-              MACONE là đại lý uỷ quyền chính thức của Apple tại Việt Nam (AAR)
+              CarLuxury là hệ thống phân phối xe sang uy tín tại Việt Nam
+              <br /><br />
+              <span className="footer-bold">Công ty TNHH CarLuxury</span>
               <br />
+              Mã số doanh nghiệp: 0123456789
               <br />
-              <span className="footer-bold">Công ty cổ phần MACONE</span>
+              Tư vấn mua xe: <a href="tel:0909090909" className="footer-link">0909 090 909</a>
               <br />
-              Giấy phép ĐKKD số: 0108037559
+              Bảo hành & Dịch vụ: <a href="tel:0988988898" className="footer-link">0988 988 898</a>
               <br />
-              Hotline tư vấn:{" "}
-              <a href="tel:0936096900" className="footer-link">
-                0936 096 900
-              </a>
+              Thời gian làm việc: <span className="footer-bold">8:00 – 20:00</span>
               <br />
-              Khách hàng Doanh nghiệp:{" "}
-              <a href="tel:0936368455" className="footer-link">
-                0936 368 455
-              </a>
-              <br />
-              Sửa chữa & Bảo hành:{" "}
-              <a href="tel:0936363501" className="footer-link">
-                0936 363 501
-              </a>
-              <br />
-              Thời gian làm việc: <span className="footer-bold">8h30 – 21h30</span>
-              <br />
-              Email:{" "}
-              <a href="mailto:lienhe@macone.vn" className="footer-email">
-                lienhe@macone.vn
-              </a>
+              Email: <a href="mailto:info@carluxury.vn" className="footer-email">info@carluxury.vn</a>
             </div>
-            <div className="footer-social-title">MẠNG XÃ HỘI</div>
+            <div className="footer-social-title">KẾT NỐI VỚI CHÚNG TÔI</div>
             <div className="footer-social">
               <a href="#" className="footer-social-icon facebook">
                 <i className="bi bi-facebook"></i>
@@ -107,68 +90,46 @@ export default function FooterCPN() {
           </Col>
 
           <Col md={2}>
-            <div className="footer-title">HỖ TRỢ KHÁCH HÀNG</div>
+            <div className="footer-title">DỊCH VỤ</div>
             <div className="footer-links">
               <a href="#">Giới thiệu</a>
-              <a href="#">Hướng dẫn mua hàng</a>
-              <a href="#">Bán hàng Doanh Nghiệp</a>
-              <a href="#">Mua trả góp</a>
-              <a href="#">Tin công nghệ</a>
-              <a href="#">MFix – Trung tâm sửa chữa</a>
+              <a href="#">Mua xe trả góp</a>
+              <a href="#">Dịch vụ bảo dưỡng</a>
+              <a href="#">Bán xe đã qua sử dụng</a>
+              <a href="#">Tin tức & Khuyến mãi</a>
               <a href="#">Liên hệ</a>
-            </div>
-            <div className="footer-cert">
-              <img
-                src="/images/dathongbao-1-e1542425893350.png"
-                alt="Bộ Công Thương Logo"
-              />
             </div>
           </Col>
 
           <Col md={3}>
             <div className="footer-title">CHÍNH SÁCH</div>
             <div className="footer-links">
-              <a href="#">Chính sách Bảo Hành & Đổi Trả</a>
-              <a href="#">Chính sách đặt hàng</a>
-              <a href="#">Chính sách vận chuyển</a>
-              <a href="#">Chính sách bảo mật thông tin</a>
+              <a href="#">Chính sách bảo hành</a>
+              <a href="#">Chính sách giao hàng</a>
               <a href="#">Chính sách thanh toán</a>
-              <a href="#">Gói bảo hành vàng MACONE Care</a>
-              <a href="#">Gói bảo hành doanh nghiệp</a>
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Điều khoản sử dụng</a>
             </div>
           </Col>
 
           <Col md={3}>
-            <div className="footer-title">Hà Nội:</div>
-            <div className="footer-address">Cơ sở 1: 113 Hoàng Cầu, Đống Đa</div>
+            <div className="footer-title">SHOWROOM CHÍNH</div>
+            <div className="footer-address">Hà Nội: 99 Trần Duy Hưng, Cầu Giấy</div>
             <div className="footer-phone">
-              SĐT: <a href="tel:0342995566">0342 99 55 66</a>
+              SĐT: <a href="tel:0977666555">0977 666 555</a>
             </div>
-            <div className="footer-address">
-              Cơ sở 2: 99 Nguyễn Văn Huyên, Cầu Giấy
-            </div>
+            <div className="footer-address">TP.HCM: 123 Nguyễn Văn Trỗi, Q.3</div>
             <div className="footer-phone">
-              SĐT: <a href="tel:0773220666">0773 220 666</a>
+              SĐT: <a href="tel:0933111222">0933 111 222</a>
             </div>
-            <div className="footer-title">Thành phố Hồ Chí Minh:</div>
-            <div className="footer-address">
-              Cơ sở 3: 186 Võ Văn Tần, Q.3, TP.HCM
-            </div>
-            <div className="footer-phone">
-              SĐT: <a href="tel:0386370444">0386 370 444</a>
-            </div>
-            <div className="footer-note">(Các cơ sở đều có chỗ để xe ô tô)</div>
+            <div className="footer-note">Có bãi đỗ xe ô tô rộng rãi</div>
           </Col>
         </Row>
 
         <div className="footer-bottom">
-          Sản phẩm tiêu biểu:{" "}
-          <span className="footer-bold">
-            BMW | Lamborini | MacBook Pro | iMac | Mac Mini | MacBook Pro
-            M4 | iMac M4 | Mac mini M4 | Mfix.vn
-          </span>
+          Các thương hiệu nổi bật: <span className="footer-bold">Ferrari | Lamborghini | Porsche | Rolls-Royce | BMW | Mercedes-Benz | Tesla</span>
           <br />
-          Copyright © 2025 - Bản quyền thuộc về MACONE.
+          Copyright © 2025 - CarLuxury. All rights reserved.
         </div>
       </Container>
     </footer>

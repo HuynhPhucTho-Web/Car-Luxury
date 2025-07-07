@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Login.css"; // Tạo file CSS nếu cần tùy chỉnh riêng
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -14,7 +15,6 @@ function Login({ onLogin }) {
     setPassword("");
     setError("");
 
-    // ✅ Giả lập fetch từ server JSON (có thể thay URL nếu bạn dùng JSON Server)
     fetch("http://localhost:3000/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
@@ -41,34 +41,35 @@ function Login({ onLogin }) {
     );
 
     if (foundUser) {
-      onLogin(foundUser); // Lưu cả object gồm username, role,...
+      onLogin(foundUser);
       navigate("/cars");
     } else {
       setError("❌ Tài khoản hoặc mật khẩu không đúng!");
     }
   };
 
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
+
   return (
-    <div
-      className="d-flex align-items-center justify-content-center vh-100"
-      style={{ background: "linear-gradient(135deg, #f0f4ff, #d9e8ff)" }}
-    >
-      <div
-        className="card shadow-lg p-4"
-        style={{ width: "100%", maxWidth: "420px", borderRadius: "1rem" }}
-      >
+    <div className="login-container">
+      <video autoPlay muted loop className="login-video-bg">
+        <source src="/videos/loginbackground.mp4" type="video/mp4" />
+      </video>
+      <div className="login-overlay" />
+
+      <div className="login-card card shadow-lg p-4">
         <div className="text-center mb-4">
-          <h2 className="fw-bold text-primary">Đăng Nhập Hệ Thống</h2>
-          <p className="text-muted small">Quản lý siêu xe cao cấp</p>
+          <h2 className="fw-bold text-white">Login Car-Luxury</h2>
+          <p className="text-light small">Cuxury Car Store</p>
         </div>
 
         {error && <div className="alert alert-danger text-center py-2">{error}</div>}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="username" className="form-label">
-              Tài khoản
-            </label>
+            <label htmlFor="username" className="form-label text-white">Account Name</label>
             <input
               type="text"
               className="form-control"
@@ -80,9 +81,7 @@ function Login({ onLogin }) {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              Mật khẩu
-            </label>
+            <label htmlFor="password" className="form-label text-white">Account Password</label>
             <input
               type="password"
               className="form-control"
@@ -94,11 +93,16 @@ function Login({ onLogin }) {
             />
           </div>
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
-              Đăng Nhập
-            </button>
+            <button type="submit" className="btn btn-primary">LOGIN</button>
           </div>
         </form>
+
+        <div className="mt-3 text-center">
+          <button className="btn btn-outline-light btn-sm me-2" onClick={handleRegisterClick}>Register</button>
+          <button className="btn btn-danger btn-sm">
+            <i className="bi bi-google me-1"></i> Continue With Google
+          </button>
+        </div>
       </div>
     </div>
   );

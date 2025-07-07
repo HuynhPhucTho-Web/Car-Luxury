@@ -1,0 +1,17 @@
+.contact-section {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  color: white;
+}
+.contact-section input {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+}
+.contact-section button {
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.contact-section h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}

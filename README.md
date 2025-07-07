@@ -56,6 +56,8 @@ vite-plugin-react – Plugin để hỗ trợ React + HMR trong Vite.
 
 npm install
 
+npm install aos
+
 npx json-server --watch car_infomation.json --port 5000
 
 npx json-server --watch user.json --port 3000
@@ -65,7 +67,10 @@ npm run dev
 
 ## 🖼️ Giao diện chính
 
-![Giao diện trang chủ](./public/images/giaodien1.png)
-![Giao diện List Car](./public/images/giaodien2.png)
+![Giao diện trang chủ](./public/images/giaodien01.png)
+![Giao diện List Car](./public/images/giaodien02.png)
+![Giao diện List Car](./public/images/giaodien03.png)
+![Giao diện List Car](./public/images/giaodien04.png)
+![Giao diện List Car](./public/images/giaodien05.png)
 ![Giao diện detail Car](./public/images/giaodien4.png)
 
