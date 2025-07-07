@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CarList.css";
 import { Link } from "react-router-dom";
+import SaleSection from "../components/SaleSection";
 
 function CarList() {
   const [cars, setCars] = useState([]);
@@ -9,7 +10,7 @@ function CarList() {
   const [search, setSearch] = useState("");
   const [priceRange, setPriceRange] = useState("");
   const [sortBy, setSortBy] = useState("");
-  const [category, setCategory] = useState("");
+  const [type, setType] = useState("");
   const [page, setPage] = useState(1);
   const limit = 12;
 
@@ -28,9 +29,11 @@ function CarList() {
       });
   }, []);
 
+  const types = [...new Set(cars.map((car) => car.type))].filter(Boolean).sort();
+
   const filteredCars = cars.filter((car) => {
     const matchSearch = car.name?.toLowerCase().includes(search.toLowerCase());
-    const matchCategory = category === "" || car.category === category;
+    const matchType = type === "" || car.type === type;
 
     let matchPrice = true;
     const price = car.priceUSD;
@@ -38,7 +41,7 @@ function CarList() {
     else if (priceRange === "200k-500k") matchPrice = price >= 200000 && price <= 500000;
     else if (priceRange === "over500k") matchPrice = price > 500000;
 
-    return matchSearch && matchCategory && matchPrice;
+    return matchSearch && matchType && matchPrice;
   });
 
   const sortedCars = [...filteredCars].sort((a, b) => {
@@ -52,24 +55,20 @@ function CarList() {
   const startIndex = (page - 1) * limit;
   const pagedCars = sortedCars.slice(startIndex, startIndex + limit);
 
-  const categories = [
-    "Supercar", "Sport", "Hypercar", "Family", "SUV", "Offroad", "Electric", "Luxury"
-  ];
-
-  if (loading) return <div className="text-center mt-5">Đang tải dữ liệu...</div>;
+  if (loading) return <div className="text-center mt-5">All</div>;
 
   return (
     <div className="container-fluid px-4 py-4 bg-light">
-      <h1 className="mb-4 text-center">Danh sách siêu xe</h1>
+      <h1 className="mb-4 text-center">Danh sách các loại xe</h1>
 
-      {/* Bộ lọc */}
+      {/* Bộ lọc theo loại xe */}
       <div className="d-flex justify-content-center flex-wrap mb-4">
-        {categories.map((cat) => (
+        {types.map((cat) => (
           <button
             key={cat}
-            className={`btn me-2 mb-2 ${category === cat ? "btn-primary" : "btn-outline-secondary"}`}
+            className={`btn me-2 mb-2 ${type === cat ? "btn-primary" : "btn-outline-secondary"}`}
             onClick={() => {
-              setCategory(cat);
+              setType(cat);
               setPage(1);
             }}
           >
@@ -77,13 +76,13 @@ function CarList() {
           </button>
         ))}
         <button
-          className={`btn mb-2 ${category === "" ? "btn-dark" : "btn-outline-dark"}`}
+          className={`btn mb-2 ${type === "" ? "btn-dark" : "btn-outline-dark"}`}
           onClick={() => {
-            setCategory("");
+            setType("");
             setPage(1);
           }}
         >
-          Tất cả
+          All
         </button>
       </div>
 
@@ -93,7 +92,7 @@ function CarList() {
           <input
             type="text"
             className="form-control"
-            placeholder="Tìm kiếm tên xe..."
+            placeholder="Tìm loại xe bạn muốn."
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -172,7 +171,6 @@ function CarList() {
                 </div>
               </Link>
             </div>
-
           ))
         )}
       </div>
@@ -195,6 +193,11 @@ function CarList() {
           Sau
         </button>
       </div>
+      <br></br>
+      <div>
+        <SaleSection />
+      </div>
+      
     </div>
   );
 }

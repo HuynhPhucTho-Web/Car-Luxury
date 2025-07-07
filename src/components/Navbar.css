@@ -40,3 +40,57 @@
   height: 500px;
   object-fit: cover;
 }
+
+.carousel video {
+  height: 500px;
+  object-fit: cover;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+.person-profile,
+.dropdown-toggle {
+  color: #000 !important; /* hoặc #fff nếu nền tối */
+  font-weight: 500;
+}
+.text-muted{
+  color: white;
+}
+/* Áp dụng cho tất cả dropdown trong navbar */
+.navbar .dropdown-menu {
+  background-color: #000;      /* Nền đen */
+  color: #fff;                 /* Chữ trắng */
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+/* Màu chữ mặc định */
+.navbar .dropdown-menu .dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover item */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #222;      /* Hover nền xám đậm */
+  color: #f8d90f;              /* Chữ vàng khi hover */
+}
+
+/* Đảm bảo submenu cũng theo style */
+.dropdown-menu .dropdown-menu {
+  background-color: #000;
+}
+/* Dòng hiển thị thông tin tài khoản (không click được) */
+.navbar .dropdown-menu .dropdown-item-text,
+.navbar .dropdown-menu .dropdown-item-text small {
+  color: #fff !important;
+}
+
+/* Biến chữ Loại xe thành trắng */
+.navbar .dropdown-toggle {
+  color: #fff !important;
+}

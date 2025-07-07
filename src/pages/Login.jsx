@@ -1,214 +1,107 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./CarList.css";
 
-function CarList() {
-  const [cars, setCars] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [priceRange, setPriceRange] = useState("");
-  const [sortBy, setSortBy] = useState("");
-  const [type, setType] = useState("");
-  const [page, setPage] = useState(1);
-  const limit = 12;
+function Login({ onLogin }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [users, setUsers] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setLoading(true);
-    fetch("http://localhost:5000/cars")
+    setUsername("");
+    setPassword("");
+    setError("");
+
+    // ✅ Giả lập fetch từ server JSON (có thể thay URL nếu bạn dùng JSON Server)
+    fetch("http://localhost:3000/users")
       .then((res) => res.json())
-      .then((data) => {
-        setCars(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Lỗi khi tải dữ liệu:", err);
-        setCars([]);
-        setLoading(false);
-      });
+      .then((data) => setUsers(data))
+      .catch(() => setError("Không thể tải dữ liệu người dùng!"));
   }, []);
 
-  const filteredCars = cars.filter((car) => {
-    const matchSearch = car.name?.toLowerCase().includes(search.toLowerCase());
-    const matchType = type === "" || car.type === type;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
 
-    let matchPrice = true;
-    const price = car.priceUSD;
-    if (priceRange === "under200k") matchPrice = price < 200000;
-    else if (priceRange === "200k-500k") matchPrice = price >= 200000 && price <= 500000;
-    else if (priceRange === "over500k") matchPrice = price > 500000;
+    if (!users) {
+      setError("Dữ liệu người dùng chưa được tải!");
+      return;
+    }
 
-    return matchSearch && matchType && matchPrice;
-  });
+    const allUsers = [
+      ...(users.admin || []),
+      ...(users.staff || []),
+      ...(users.customers || [])
+    ];
 
-  const sortedCars = [...filteredCars].sort((a, b) => {
-    if (sortBy === "price-asc") return a.priceUSD - b.priceUSD;
-    if (sortBy === "price-desc") return b.priceUSD - a.priceUSD;
-    if (sortBy === "new") return b.isNew - a.isNew;
-    if (sortBy === "old") return a.isNew - b.isNew;
-    return 0;
-  });
+    const foundUser = allUsers.find(
+      (u) => u.username === username && u.password === password
+    );
 
-  const startIndex = (page - 1) * limit;
-  const pagedCars = sortedCars.slice(startIndex, startIndex + limit);
-
-  // Lấy tất cả loại xe duy nhất (type) từ dữ liệu
-  const types = [...new Set(cars.map((car) => car.type))];
-
-  if (loading) return <div className="text-center mt-5">Đang tải dữ liệu...</div>;
+    if (foundUser) {
+      onLogin(foundUser); // Lưu cả object gồm username, role,...
+      navigate("/cars");
+    } else {
+      setError("❌ Tài khoản hoặc mật khẩu không đúng!");
+    }
+  };
 
   return (
-    <div className="container-fluid px-4 py-4 bg-light">
-      <h1 className="mb-4 text-center">Danh sách siêu xe</h1>
-
-      {/* Bộ lọc theo loại (type) */}
-      <div className="d-flex justify-content-center flex-wrap mb-4">
-        {types.map((t) => (
-          <button
-            key={t}
-            className={`btn me-2 mb-2 ${type === t ? "btn-primary" : "btn-outline-secondary"}`}
-            onClick={() => {
-              setType(t);
-              setPage(1);
-            }}
-          >
-            {t}
-          </button>
-        ))}
-        <button
-          className={`btn mb-2 ${type === "" ? "btn-dark" : "btn-outline-dark"}`}
-          onClick={() => {
-            setType("");
-            setPage(1);
-          }}
-        >
-          Tất cả
-        </button>
-      </div>
-
-      {/* Tìm kiếm và sắp xếp */}
-      <div className="row mb-4 justify-content-center">
-        <div className="col-md-4 mb-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Tìm kiếm tên xe..."
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              setPage(1);
-            }}
-          />
+    <div
+      className="d-flex align-items-center justify-content-center vh-100"
+      style={{ background: "linear-gradient(135deg, #f0f4ff, #d9e8ff)" }}
+    >
+      <div
+        className="card shadow-lg p-4"
+        style={{ width: "100%", maxWidth: "420px", borderRadius: "1rem" }}
+      >
+        <div className="text-center mb-4">
+          <h2 className="fw-bold text-primary">Đăng Nhập Hệ Thống</h2>
+          <p className="text-muted small">Quản lý siêu xe cao cấp</p>
         </div>
-        <div className="col-md-3 mb-2">
-          <select
-            className="form-select"
-            value={priceRange}
-            onChange={(e) => {
-              setPriceRange(e.target.value);
-              setPage(1);
-            }}
-          >
-            <option value="">Lọc theo giá (USD)</option>
-            <option value="under200k">Dưới $200,000</option>
-            <option value="200k-500k">$200,000 - $500,000</option>
-            <option value="over500k">Trên $500,000</option>
-          </select>
-        </div>
-        <div className="col-md-3 mb-2">
-          <select
-            className="form-select"
-            value={sortBy}
-            onChange={(e) => {
-              setSortBy(e.target.value);
-              setPage(1);
-            }}
-          >
-            <option value="">Sắp xếp theo</option>
-            <option value="price-asc">Giá tăng dần</option>
-            <option value="price-desc">Giá giảm dần</option>
-            <option value="new">Xe mới</option>
-            <option value="old">Xe cũ</option>
-          </select>
-        </div>
-      </div>
 
-      {/* Danh sách xe (in trực tiếp card không qua component) */}
-      <div className="row g-4">
-        {pagedCars.length === 0 ? (
-          <div className="col-12 text-center py-5">
-            <h5>Không tìm thấy xe phù hợp</h5>
-            <p>Hãy thử từ khóa khác hoặc thay đổi bộ lọc</p>
+        {error && <div className="alert alert-danger text-center py-2">{error}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="username" className="form-label">
+              Tài khoản
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="username"
+              placeholder="Nhập tài khoản"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
           </div>
-        ) : (
-          pagedCars.map((car) => (
-            <div className="col-sm-6 col-md-4 col-lg-3" key={car.id}>
-              <div className="car-card card h-100 shadow-sm">
-                <div className="position-relative">
-                  {car.isBestSale && (
-                    <span className="badge bg-danger position-absolute top-0 start-50 translate-middle-x m-2">
-                      BÁN CHẠY
-                    </span>
-                  )}
-                  {car.isNew !== undefined && (
-                    <span
-                      className={`badge position-absolute top-0 start-0 m-2 ${
-                        car.isNew ? "bg-success" : "bg-secondary"
-                      }`}
-                    >
-                      {car.isNew ? "MỚI" : "CŨ"}
-                    </span>
-                  )}
-                  <img
-                    src={
-                      car.image?.startsWith("http")
-                        ? car.image
-                        : `http://localhost:5000${car.image}`
-                    }
-                    className="card-img-top"
-                    alt={car.name}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "/images/car-default.png";
-                    }}
-                  />
-                </div>
-                <div className="card-body text-center px-2">
-                  <h6 className="fw-bold">{car.name}</h6>
-                  {car.description && (
-                    <small className="text-muted d-block mb-1">
-                      {car.description}
-                    </small>
-                  )}
-                  <p className="text-danger fw-bold mb-0">
-                    {car.priceUSD ? `$${car.priceUSD.toLocaleString()}` : "Liên hệ"}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))
-        )}
-      </div>
-
-      {/* Phân trang */}
-      <div className="d-flex justify-content-center align-items-center mt-4">
-        <button
-          className="btn btn-outline-secondary me-2"
-          onClick={() => setPage(page - 1)}
-          disabled={page === 1}
-        >
-          Trước
-        </button>
-        <span>Trang {page}</span>
-        <button
-          className="btn btn-outline-secondary ms-2"
-          onClick={() => setPage(page + 1)}
-          disabled={startIndex + limit >= sortedCars.length}
-        >
-          Sau
-        </button>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Mật khẩu
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Nhập mật khẩu"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Đăng Nhập
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
 
-export default CarList;
+export default Login;
