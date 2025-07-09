@@ -21,14 +21,14 @@
     "customers": [
       {
         "customerID": 1,
-        "username": "Huynh",
+        "username": "customer01",
         "fullName": "Nguyen Van A",
         "password": "custpass",
         "role": "customer"
       },
       {
         "customerID": 2,
-        "username": "Tho",
+        "username": "customer02",
         "fullName": "Tran Thi B",
         "password": "abc123",
         "role": "customer"

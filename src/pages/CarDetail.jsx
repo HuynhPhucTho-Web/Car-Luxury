@@ -67,7 +67,21 @@ function CarDetail() {
                 padding: "1rem",
                 background: "#f8f9fa",
               }}
+
             />
+            <div className="div-image">
+              {car.subImages && car.subImages.length > 0 ? (
+                car.subImages.map((subImage, index) => (
+                  <img
+                    key={index}
+                    src={subImage}
+                    alt={`${car.name} Sub ${index + 1}`}
+                  />
+                ))
+              ) : (
+                <p>Không có ảnh phụ</p>
+              )}
+            </div>
           </Card>
         </Col>
 

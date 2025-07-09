@@ -61,3 +61,30 @@
     padding: 1rem !important;
   }
 }
+
+
+.div-image {
+ margin-left: 3px;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.div-image img {
+  filter: saturate(0%);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid whitesmoke;
+  border-radius: 12px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+}
+
+.div-image img:hover {
+  filter: saturate(100%);
+  width: 200px;
+  height: 200px;
+}

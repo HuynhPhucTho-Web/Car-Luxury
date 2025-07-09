@@ -11,6 +11,12 @@
             "topSpeed": "340 km/h",
             "priceUSD": 524000,
             "image": "/images/Ferrari.png",
+            "subImages": [
+                "/images/Ferrari1.png",
+                "/images/Ferrari2.png",
+                "/images/Ferrari3.png",
+                "/images/Ferrari4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Hybrid",
@@ -30,6 +36,12 @@
             "topSpeed": "350 km/h",
             "priceUSD": 600000,
             "image": "/images/Lamborghini.png",
+            "subImages": [
+                "/images/Lamborghini1.png",
+                "/images/Lamborghini2.png",
+                "/images/Lamborghini3.png",
+                "/images/Lamborghini4.png"
+            ],
             "isNew": true,
             "year": 2024,
             "fuelType": "Hybrid",
@@ -49,6 +61,12 @@
             "topSpeed": "330 km/h",
             "priceUSD": 230000,
             "image": "/images/porsche.png",
+            "subImages": [
+                "/images/porsche1.png",
+                "/images/porsche2.png",
+                "/images/porsche3.png",
+                "/images/porsche4.png"
+            ],
             "isNew": false,
             "year": 2022,
             "fuelType": "Petrol",
@@ -68,6 +86,12 @@
             "topSpeed": "330 km/h",
             "priceUSD": 385000,
             "image": "/images/mclaren.png",
+            "subImages": [
+                "/images/mclaren1.png",
+                "/images/mclaren2.png",
+                "/images/mclaren3.png",
+                "/images/mclaren4.png"
+            ],
             "isNew": false,
             "year": 2021,
             "fuelType": "Petrol",
@@ -87,6 +111,12 @@
             "topSpeed": "440 km/h",
             "priceUSD": 3900000,
             "image": "/images/bugatti.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2020,
             "fuelType": "Petrol",
@@ -106,6 +136,12 @@
             "topSpeed": "340 km/h",
             "priceUSD": 330000,
             "image": "/images/Aston.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2022,
             "fuelType": "Petrol",
@@ -125,6 +161,12 @@
             "topSpeed": "312 km/h",
             "priceUSD": 115000,
             "image": "/images/chevrolet.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Petrol",
@@ -144,6 +186,12 @@
             "topSpeed": "347 km/h",
             "priceUSD": 500000,
             "image": "/images/ford.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2021,
             "fuelType": "Petrol",
@@ -163,6 +211,12 @@
             "topSpeed": "325 km/h",
             "priceUSD": 325000,
             "image": "/images/mercedes.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2021,
             "fuelType": "Petrol",
@@ -182,6 +236,12 @@
             "topSpeed": "315 km/h",
             "priceUSD": 210000,
             "image": "/images/nissan.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2020,
             "fuelType": "Petrol",
@@ -201,6 +261,12 @@
             "topSpeed": "250 km/h",
             "priceUSD": 50000,
             "image": "/images/toyotasupra.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Petrol",
@@ -220,6 +286,12 @@
             "topSpeed": "290 km/h",
             "priceUSD": 75000,
             "image": "/images/bmw.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2022,
             "fuelType": "Petrol",
@@ -239,6 +311,12 @@
             "topSpeed": "330 km/h",
             "priceUSD": 210000,
             "image": "/images/audir8.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2021,
             "fuelType": "Petrol",
@@ -258,6 +336,12 @@
             "topSpeed": "320 km/h",
             "priceUSD": 2500000,
             "image": "/images/lotu.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Electric",
@@ -277,6 +361,12 @@
             "topSpeed": "480 km/h",
             "priceUSD": 3000000,
             "image": "/images/koenigsegg.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Petrol",
@@ -296,6 +386,12 @@
             "topSpeed": "370 km/h",
             "priceUSD": 3000000,
             "image": "/images/pagani.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2020,
             "fuelType": "Petrol",
@@ -315,6 +411,12 @@
             "topSpeed": "322 km/h",
             "priceUSD": 130000,
             "image": "/images/TeslaModel.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Electric",
@@ -334,6 +436,12 @@
             "topSpeed": "412 km/h",
             "priceUSD": 2500000,
             "image": "/images/Rimac.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Electric",
@@ -354,6 +462,12 @@
             "topSpeed": "270 km/h",
             "priceUSD": 169000,
             "image": "/images/lucid.png",
+            "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": true,
             "year": 2023,
             "fuelType": "Electric",
@@ -373,6 +487,12 @@
             "topSpeed": "250 km/h",
             "priceUSD": 147500,
             "image": "/images/bmwi8.png",
+           "subImages": [
+                "/images/bugatti1.png",
+                "/images/bugatti2.png",
+                "/images/bugatti3.png",
+                "/images/bugatti4.png"
+            ],
             "isNew": false,
             "year": 2020,
             "fuelType": "Hybrid",
